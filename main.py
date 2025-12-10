@@ -42,10 +42,9 @@ if __name__ == '__main__':
     maxi = 0
     
     for i in knapsack_all_combinations(items, CAP):
-        if i['value'] > (ABS_value - i['value']):
-            print(i['Name'], (i['value'] - (ABS_value - i['value'])))
-        if (i['value'] - (ABS_value - i['value'])) >= maxi:
-            maxi = (i['value'] - (ABS_value - i['value']))
+        if (i['value'] + 15) > (ABS_value - i['value']):
+            print(i['Name'], (i['value'] + 15 - (ABS_value - i['value'])))
+        if (i['value'] + 15 - (ABS_value - i['value'])) >= maxi:
+            maxi = (i['value'] + 15 - (ABS_value - i['value']))
 
     print(maxi)
-
